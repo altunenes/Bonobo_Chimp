@@ -5,6 +5,8 @@ While I worked in great-ape faces at the laboratory I discerned that most people
 
 I trained my model in google-collab with a free graphic card for about 6.5+ hours. I will put all weight files but be careful about the overfitting problem! I always use 3000 weights for detection, which has the %90  mean average precision (mAP@0.50 = 0.906938 -Detection Time: 4 Seconds)
 
+Weigths for 3000 iteration: https://drive.google.com/file/d/1-4GGmQj4Xh7i-6d-y5rDo6gDjaFZw9Q_/view?usp=sharing
+
 Scientific paper for Yolo v4: https://arxiv.org/abs/2004.10934
 
 Darknet Manual:              https://github.com/AlexeyAB/darknet/wiki
