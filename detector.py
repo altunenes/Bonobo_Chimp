@@ -63,6 +63,7 @@ for img_path in images_path:
 
     indexes = cv2.dnn.NMSBoxes(boxes, confidences, 0.5, 0.4)
     print(indexes)
+    # you can change drawing functions, check here for many of them:  https://docs.opencv.org/master/d6/d6e/group__imgproc__draw.html
     font = cv2.FONT_HERSHEY_PLAIN
     
     #infos of rectangles. You can add confidences however, sometimes imshow does not work properly wit this. I will add this also you can put into the after "label" line
@@ -79,8 +80,9 @@ for img_path in images_path:
             cv2.rectangle(img, (x, y), (x + w, y + h), color, 2)
             cv2.putText(img, label, (x, y + 30), font, 3, color, 2)
 
-
+    #show images
     cv2.imshow("Image", img)
+    #waits until your keyboard response for the passing to the next image
     key = cv2.waitKey(0)
 
 cv2.destroyAllWindows()
