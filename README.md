@@ -8,7 +8,7 @@ While I worked in great-ape faces at the laboratory I discerned that people who 
 I trained my model(it has 288 images) in google-collab with a free graphic card for about 6.5+ hours. I put here only the 3000th weight file after the test of overfitting. I always use 3000 weights for detection, which has the %90  mean average precision (mAP@0.50 = 0.906938 -Detection Time: 4 Seconds) 
 
 
-
+# Download Weight File (244mb)
 Weigths for 3000 iteration: https://drive.google.com/file/d/1-4GGmQj4Xh7i-6d-y5rDo6gDjaFZw9Q_/view?usp=sharing
 
 Scientific paper for Yolo v4: https://arxiv.org/abs/2004.10934
