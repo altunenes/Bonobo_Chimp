@@ -9,7 +9,7 @@ I trained my model(it has 288 images) in google-collab with a free graphic card 
 
 
 # Download Weight File (244mb)
-Weigths for 3000 iteration: https://drive.google.com/file/d/1-4GGmQj4Xh7i-6d-y5rDo6gDjaFZw9Q_/view?usp=sharing
+Weigths for 3000 iteration:bonoboChimp.weights
 
 Scientific paper for Yolo v4: https://arxiv.org/abs/2004.10934
 
