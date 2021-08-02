@@ -4,13 +4,13 @@ import numpy as np
 import glob
 import random
 
-#These files must be on your current workspace (you can download weights from my drive; I've put the link into the readme).
-net = cv2.dnn.readNet("yolov4-obj.cfg", "yolov4-obj_3000.weights")
+#These files must be on your current workspace 
+net = cv2.dnn.readNet("yolov4-obj.cfg", "bonoboChimp.weights")
 
 classes = ["bonobo","chimp"]
 
 
-images_path = glob.glob(r"C:\Users\enes-\Desktop\test\*.jpg")  #your image path. 
+images_path = glob.glob(r"C:\Users\emportent\Desktop\test\*.jpg")  # image dir for for loop. 
 
 layer_names = net.getLayerNames()
 output_layers = [layer_names[i[0] - 1] for i in net.getUnconnectedOutLayers()]
@@ -18,7 +18,7 @@ output_layers = [layer_names[i[0] - 1] for i in net.getUnconnectedOutLayers()]
 #you can change colors and frontsizes of rectangles...
 colors = np.random.uniform(0, 255, size=(len(classes), 3))
 
-#shufflinf images randomly
+#shuffling images randomly
 random.shuffle(images_path)
 
 for img_path in images_path:
@@ -33,7 +33,7 @@ for img_path in images_path:
     net.setInput(blob)
     outs = net.forward(output_layers)
 
-    # rectangle infos. You can add various information to your rectangle. 
+    # rectangle info. You can add various information to your rectangle. 
     class_ids = []
     confidences = []
     boxes = []
@@ -42,7 +42,7 @@ for img_path in images_path:
             scores = detection[5:]
             class_id = np.argmax(scores)
             confidence = scores[class_id]
-            #you can also change the confidence. I put as .3 but most of programmers use .5
+            #you can also change your confidence
             if confidence > 0.3:
                 # after detection, we may print into our console:
                 print(class_id)
@@ -53,7 +53,7 @@ for img_path in images_path:
                 w = int(detection[2] * width)
                 h = int(detection[3] * height)
 
-                .
+                
                 x = int(center_x - w / 2)
                 y = int(center_y - h / 2)
 
@@ -63,10 +63,10 @@ for img_path in images_path:
 
     indexes = cv2.dnn.NMSBoxes(boxes, confidences, 0.5, 0.4)
     print(indexes)
-    # you can change drawing functions, check here for many of them:  https://docs.opencv.org/master/d6/d6e/group__imgproc__draw.html
+    # you can change drawing functions
     font = cv2.FONT_HERSHEY_PLAIN
     
-    #infos of rectangles. You can add confidences however, sometimes imshow does not work properly wit this. I will add this also you can put into the after "label" line
+    #info of rectangles. You can add confidence; however, sometimes imshow does not work properly with this. I will add this also, you can put it into the after "label" line
     #confidence=confidences[i]
     #then change the cv2.putText line as:
     #cv2.putText(img, label + "" + str(round(confidence, 2)),(x, y + 30), font, 3, color, 2)
