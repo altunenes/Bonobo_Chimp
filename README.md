@@ -5,7 +5,7 @@
 
 While I worked in great-ape faces at the laboratory I discerned that people who unfamiliar with these species' faces are failed to discriminate between chimpanzee and bonobo faces. "They all look to same" always I heard from participants throughout my research period. Today, I thought maybe this model may help those who trying to discriminate between bonobo and chimpanzee faces. Many of you maybe have a belief that our closest genetic relatives are chimpanzees. However, we now know that we share approximately 98.7% of our DNA with chimps and bonobos. Both species are more closely related to humans. DNA evidences suggests the bonobo and chimpanzee species diverged approximately 890,000–860,000 years ago doi: https://www.nature.com/articles/nature04789 & https://www.nature.com/articles/srep11356
 
-I trained my model(it has 288 images) in google-collab with a free graphic card for about 6.5+ hours. I put here only the 3000th weight file after the test of overfitting. I always use 3000 weights for detection, which has the %90  mean average precision (mAP@0.50 = 0.906938 -Detection Time: 4 Seconds) 
+I trained my model in google-collab with a free graphic card for about 6.5+ hours. I put here only the 3000th weight file after the test of overfitting. I always use 3000 weights for detection, which has the %90  mean average precision (mAP@0.50 = 0.906938 -Detection Time: 4 Seconds) 
 
 
 # Download Weight File (244mb)
