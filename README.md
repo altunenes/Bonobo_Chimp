@@ -1,3 +1,6 @@
+
+[![CodeFactor](https://www.codefactor.io/repository/github/emportent/bonobo_chimp/badge/main)](https://www.codefactor.io/repository/github/emportent/bonobo_chimp/overview/main)
+
 # Bonobo_Chimp
 -A Yolo 4 model for discriminating between bonobo and chimpanzee faces-
 
